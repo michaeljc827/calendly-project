@@ -16,6 +16,7 @@ A project.
 <<<<<<< HEAD
 - **Michael Camacho** - _Initial source code work_ - [michaeljc827](https://github.com/michaeljc827)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -26,6 +27,14 @@ This is Michael's edit
 =======
 - **Michael Camacho** - _Best source code work_ - [michaeljc827](https://github.com/michaeljc827)
 >>>>>>> 313371c67e40d69c5264f4bbf055dd26377578d9
+||||||| 49b9984... Michaeljc827 README Update
+
+
+
+
+This is Michael's edit
+=======
+>>>>>>> parent of 49b9984... Michaeljc827 README Update
 ||||||| 49b9984... Michaeljc827 README Update
 
 
