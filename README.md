@@ -13,7 +13,4 @@ A project.
 
 - **Michael Chavez** - _Initial source code work_ - [triedbyseven](https://github.com/triedbyseven)
 
-- **Michael Camacho** - _Best source code work_ - [michaeljc827](https://github.com/michaeljc827)
 - **Michael Camacho** - _Initial source code work_ - [michaeljc827](https://github.com/michaeljc827)
-
-This is Michael's edit
