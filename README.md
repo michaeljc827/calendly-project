@@ -36,6 +36,7 @@ This is Michael's edit
 This is Michael's edit
 =======
 >>>>>>> parent of 49b9984... Michaeljc827 README Update
+<<<<<<< HEAD
 ||||||| a83dd73... Updated README
 # Calendaly Project
 
@@ -64,3 +65,14 @@ A project.
 This is Michael's edit
 =======
 >>>>>>> parent of 49b9984... Michaeljc827 README Update
+||||||| merged common ancestors
+=======
+||||||| 49b9984... Michaeljc827 README Update
+
+
+
+
+This is Michael's edit
+=======
+>>>>>>> parent of 49b9984... Michaeljc827 README Update
+>>>>>>> 2b483d20585c5f9a588d0761303be6fb7906e41a
