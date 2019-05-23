@@ -1,13 +1,12 @@
 # Calendaly Project
 
-A project.
+A Calendaly based project.
 
-<!-- ## Built With -->
+## Built With
 
-<!-- - [React Native](https://facebook.github.io/react-native/) - React native framework.
+- [React Native](https://facebook.github.io/react-native/) - React native framework.
 - [Apollo](https://www.apollographql.com/docs/) - Apollo framework for react native .
 - [GraphQL](https://graphql.org/) - GraphQL api framework.
-- [Amplify](https://aws-amplify.github.io/) - Amplify CLI for architecture. -->
 
 ## Authors
 
