@@ -13,9 +13,15 @@ A project.
 
 - **Michael Chavez** - _Initial source code work_ - [triedbyseven](https://github.com/triedbyseven)
 
+<<<<<<< HEAD
 - **Michael Camacho** - _Initial source code work_ - [michaeljc827](https://github.com/michaeljc827)
 
 
 
 
 This is Michael's edit
+||||||| merged common ancestors
+- **Michael Camacho** - _Initial source code work_ - [michaeljc827](https://github.com/michaeljc827)
+=======
+- **Michael Camacho** - _Best source code work_ - [michaeljc827](https://github.com/michaeljc827)
+>>>>>>> 313371c67e40d69c5264f4bbf055dd26377578d9
