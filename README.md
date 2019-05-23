@@ -1,6 +1,6 @@
 # Calendaly Project
 
-A project.
+A Calendaly based project.
 
 ## Built With
 
