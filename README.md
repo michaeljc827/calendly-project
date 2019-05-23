@@ -17,6 +17,7 @@ A project.
 <<<<<<< HEAD
 - **Michael Camacho** - _Initial source code work_ - [michaeljc827](https://github.com/michaeljc827)
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -55,3 +56,11 @@ A project.
 =======
 # calendly-project
 >>>>>>> parent of a83dd73... Updated README
+||||||| 49b9984... Michaeljc827 README Update
+
+
+
+
+This is Michael's edit
+=======
+>>>>>>> parent of 49b9984... Michaeljc827 README Update
