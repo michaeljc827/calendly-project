@@ -1,52 +1,18 @@
 const { ApolloServer, gql } = require('apollo-server');
 const { prisma } = require('./prisma/generated/prisma-client/')
 
+/*Schemas*/
+const { query } = require('./src/schemas/query')
+const { meeting } = require('./src/schemas/meeting');
 
-const typeDefs = gql`
-    type Query {
-        users: [User]
-    }
-
-    type Mutation {
-        addUserToMeeting: User!
-    }
-
-    type Meeting {
-        id: ID!
-        title: String!
-        users: [User!]!
-    }
-
-    type User {
-        id: ID!
-        password: String
-        name: String
-        meetings: [Meeting!]!
-    }
-`;
-
+/*Resolvers*/
+const Query = require('./src/resolvers/Query');
 const resolvers = {
-    Query: {
-        users: (parent, info, context) => {
-            return context.prisma.users();
-        }
-    },
-    Mutation: {
-    },
-    User: {
-        password: () => {
-            return "This is a password"
-        },
-        meetings: (parent, info, context) => {
-            return context.prisma.user({
-                id: parent.id
-            }).meetings();
-        }
-    }
+    Query
 };
 
 const server = new ApolloServer({
-    typeDefs,
+    typeDefs: [query, meeting],
     resolvers,
     context: async ({ req }) => {
         return {
