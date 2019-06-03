@@ -1,0 +1,38 @@
+type Event {
+  id: ID! @id
+  name: String!
+  meetings: [Meeting!]!
+}
+
+type Meeting {
+  id: ID! @id
+  name: String!
+  event: Event! 
+  location: String!
+  staff: [Staff!]!
+  attendees: [Attendee!]!
+  reservations: [Reservation!]!
+}
+
+type Reservation {
+  id: ID! @id
+  attendee: Attendee!
+  meeting: Meeting!
+  timeSlot: String!
+}
+
+type Staff {
+  id: ID! @id
+  name: String!
+  meetings: [Meeting!]!
+  password: String!
+  phoneNumber: String!
+}
+
+type Attendee {
+  id: ID! @id
+  name: String!
+  email: String!
+  reservations: [Reservation!]!
+}
+
