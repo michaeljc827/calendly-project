@@ -1021,6 +1021,7 @@ input ReservationWhereUniqueInput {
 type Staff {
   id: ID!
   name: String!
+  emailAddress: String!
   meetings(where: MeetingWhereInput, orderBy: MeetingOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Meeting!]
   password: String!
   phoneNumber: String!
@@ -1035,6 +1036,7 @@ type StaffConnection {
 input StaffCreateInput {
   id: ID
   name: String!
+  emailAddress: String!
   meetings: MeetingCreateManyWithoutStaffInput
   password: String!
   phoneNumber: String!
@@ -1048,6 +1050,7 @@ input StaffCreateManyWithoutMeetingsInput {
 input StaffCreateWithoutMeetingsInput {
   id: ID
   name: String!
+  emailAddress: String!
   password: String!
   phoneNumber: String!
 }
@@ -1062,6 +1065,8 @@ enum StaffOrderByInput {
   id_DESC
   name_ASC
   name_DESC
+  emailAddress_ASC
+  emailAddress_DESC
   password_ASC
   password_DESC
   phoneNumber_ASC
@@ -1071,6 +1076,7 @@ enum StaffOrderByInput {
 type StaffPreviousValues {
   id: ID!
   name: String!
+  emailAddress: String!
   password: String!
   phoneNumber: String!
 }
@@ -1104,6 +1110,20 @@ input StaffScalarWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
+  emailAddress: String
+  emailAddress_not: String
+  emailAddress_in: [String!]
+  emailAddress_not_in: [String!]
+  emailAddress_lt: String
+  emailAddress_lte: String
+  emailAddress_gt: String
+  emailAddress_gte: String
+  emailAddress_contains: String
+  emailAddress_not_contains: String
+  emailAddress_starts_with: String
+  emailAddress_not_starts_with: String
+  emailAddress_ends_with: String
+  emailAddress_not_ends_with: String
   password: String
   password_not: String
   password_in: [String!]
@@ -1157,6 +1177,7 @@ input StaffSubscriptionWhereInput {
 
 input StaffUpdateInput {
   name: String
+  emailAddress: String
   meetings: MeetingUpdateManyWithoutStaffInput
   password: String
   phoneNumber: String
@@ -1164,12 +1185,14 @@ input StaffUpdateInput {
 
 input StaffUpdateManyDataInput {
   name: String
+  emailAddress: String
   password: String
   phoneNumber: String
 }
 
 input StaffUpdateManyMutationInput {
   name: String
+  emailAddress: String
   password: String
   phoneNumber: String
 }
@@ -1193,6 +1216,7 @@ input StaffUpdateManyWithWhereNestedInput {
 
 input StaffUpdateWithoutMeetingsDataInput {
   name: String
+  emailAddress: String
   password: String
   phoneNumber: String
 }
@@ -1237,6 +1261,20 @@ input StaffWhereInput {
   name_not_starts_with: String
   name_ends_with: String
   name_not_ends_with: String
+  emailAddress: String
+  emailAddress_not: String
+  emailAddress_in: [String!]
+  emailAddress_not_in: [String!]
+  emailAddress_lt: String
+  emailAddress_lte: String
+  emailAddress_gt: String
+  emailAddress_gte: String
+  emailAddress_contains: String
+  emailAddress_not_contains: String
+  emailAddress_starts_with: String
+  emailAddress_not_starts_with: String
+  emailAddress_ends_with: String
+  emailAddress_not_ends_with: String
   meetings_every: MeetingWhereInput
   meetings_some: MeetingWhereInput
   meetings_none: MeetingWhereInput

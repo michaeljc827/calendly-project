@@ -280,6 +280,8 @@ export type StaffOrderByInput =
   | "id_DESC"
   | "name_ASC"
   | "name_DESC"
+  | "emailAddress_ASC"
+  | "emailAddress_DESC"
   | "password_ASC"
   | "password_DESC"
   | "phoneNumber_ASC"
@@ -340,6 +342,20 @@ export interface StaffWhereInput {
   name_not_starts_with?: Maybe<String>;
   name_ends_with?: Maybe<String>;
   name_not_ends_with?: Maybe<String>;
+  emailAddress?: Maybe<String>;
+  emailAddress_not?: Maybe<String>;
+  emailAddress_in?: Maybe<String[] | String>;
+  emailAddress_not_in?: Maybe<String[] | String>;
+  emailAddress_lt?: Maybe<String>;
+  emailAddress_lte?: Maybe<String>;
+  emailAddress_gt?: Maybe<String>;
+  emailAddress_gte?: Maybe<String>;
+  emailAddress_contains?: Maybe<String>;
+  emailAddress_not_contains?: Maybe<String>;
+  emailAddress_starts_with?: Maybe<String>;
+  emailAddress_not_starts_with?: Maybe<String>;
+  emailAddress_ends_with?: Maybe<String>;
+  emailAddress_not_ends_with?: Maybe<String>;
   meetings_every?: Maybe<MeetingWhereInput>;
   meetings_some?: Maybe<MeetingWhereInput>;
   meetings_none?: Maybe<MeetingWhereInput>;
@@ -572,6 +588,7 @@ export interface MeetingUpsertWithWhereUniqueWithoutStaffInput {
 
 export interface StaffUpdateWithoutMeetingsDataInput {
   name?: Maybe<String>;
+  emailAddress?: Maybe<String>;
   password?: Maybe<String>;
   phoneNumber?: Maybe<String>;
 }
@@ -638,6 +655,20 @@ export interface StaffScalarWhereInput {
   name_not_starts_with?: Maybe<String>;
   name_ends_with?: Maybe<String>;
   name_not_ends_with?: Maybe<String>;
+  emailAddress?: Maybe<String>;
+  emailAddress_not?: Maybe<String>;
+  emailAddress_in?: Maybe<String[] | String>;
+  emailAddress_not_in?: Maybe<String[] | String>;
+  emailAddress_lt?: Maybe<String>;
+  emailAddress_lte?: Maybe<String>;
+  emailAddress_gt?: Maybe<String>;
+  emailAddress_gte?: Maybe<String>;
+  emailAddress_contains?: Maybe<String>;
+  emailAddress_not_contains?: Maybe<String>;
+  emailAddress_starts_with?: Maybe<String>;
+  emailAddress_not_starts_with?: Maybe<String>;
+  emailAddress_ends_with?: Maybe<String>;
+  emailAddress_not_ends_with?: Maybe<String>;
   password?: Maybe<String>;
   password_not?: Maybe<String>;
   password_in?: Maybe<String[] | String>;
@@ -694,6 +725,7 @@ export interface MeetingCreateManyWithoutStaffInput {
 
 export interface StaffUpdateManyDataInput {
   name?: Maybe<String>;
+  emailAddress?: Maybe<String>;
   password?: Maybe<String>;
   phoneNumber?: Maybe<String>;
 }
@@ -895,6 +927,7 @@ export interface ReservationUpsertWithWhereUniqueWithoutAttendeeInput {
 export interface StaffCreateWithoutMeetingsInput {
   id?: Maybe<ID_Input>;
   name: String;
+  emailAddress: String;
   password: String;
   phoneNumber: String;
 }
@@ -1030,6 +1063,7 @@ export interface MeetingScalarWhereInput {
 
 export interface StaffUpdateManyMutationInput {
   name?: Maybe<String>;
+  emailAddress?: Maybe<String>;
   password?: Maybe<String>;
   phoneNumber?: Maybe<String>;
 }
@@ -1241,6 +1275,7 @@ export interface MeetingUpdateManyWithoutEventInput {
 export interface StaffCreateInput {
   id?: Maybe<ID_Input>;
   name: String;
+  emailAddress: String;
   meetings?: Maybe<MeetingCreateManyWithoutStaffInput>;
   password: String;
   phoneNumber: String;
@@ -1314,6 +1349,7 @@ export interface ReservationUpdateWithWhereUniqueWithoutMeetingInput {
 
 export interface StaffUpdateInput {
   name?: Maybe<String>;
+  emailAddress?: Maybe<String>;
   meetings?: Maybe<MeetingUpdateManyWithoutStaffInput>;
   password?: Maybe<String>;
   phoneNumber?: Maybe<String>;
@@ -1379,6 +1415,7 @@ export interface NodeNode {
 export interface StaffPreviousValues {
   id: ID_Output;
   name: String;
+  emailAddress: String;
   password: String;
   phoneNumber: String;
 }
@@ -1388,6 +1425,7 @@ export interface StaffPreviousValuesPromise
     Fragmentable {
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
+  emailAddress: () => Promise<String>;
   password: () => Promise<String>;
   phoneNumber: () => Promise<String>;
 }
@@ -1397,6 +1435,7 @@ export interface StaffPreviousValuesSubscription
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   name: () => Promise<AsyncIterator<String>>;
+  emailAddress: () => Promise<AsyncIterator<String>>;
   password: () => Promise<AsyncIterator<String>>;
   phoneNumber: () => Promise<AsyncIterator<String>>;
 }
@@ -2088,6 +2127,7 @@ export interface MeetingSubscriptionPayloadSubscription
 export interface Staff {
   id: ID_Output;
   name: String;
+  emailAddress: String;
   password: String;
   phoneNumber: String;
 }
@@ -2095,6 +2135,7 @@ export interface Staff {
 export interface StaffPromise extends Promise<Staff>, Fragmentable {
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
+  emailAddress: () => Promise<String>;
   meetings: <T = FragmentableArray<Meeting>>(args?: {
     where?: MeetingWhereInput;
     orderBy?: MeetingOrderByInput;
@@ -2113,6 +2154,7 @@ export interface StaffSubscription
     Fragmentable {
   id: () => Promise<AsyncIterator<ID_Output>>;
   name: () => Promise<AsyncIterator<String>>;
+  emailAddress: () => Promise<AsyncIterator<String>>;
   meetings: <T = Promise<AsyncIterator<MeetingSubscription>>>(args?: {
     where?: MeetingWhereInput;
     orderBy?: MeetingOrderByInput;
@@ -2131,6 +2173,7 @@ export interface StaffNullablePromise
     Fragmentable {
   id: () => Promise<ID_Output>;
   name: () => Promise<String>;
+  emailAddress: () => Promise<String>;
   meetings: <T = FragmentableArray<Meeting>>(args?: {
     where?: MeetingWhereInput;
     orderBy?: MeetingOrderByInput;

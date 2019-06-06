@@ -1,7 +1,10 @@
-function getMeetings(parent, args, context) {
-    return context.prisma.meetings();
+async function getStaff(parent, args, context) {
+    const result = await context.prisma.staffs();
+    console.log(result);
+    return result;
 }
 
+
 module.exports = {
-    getMeetings
+    getStaff
 }

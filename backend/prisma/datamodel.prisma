@@ -27,6 +27,7 @@ type Staff {
   meetings: [Meeting!]!
   password: String!
   phoneNumber: String!
+  emailAddress: String!
 }
 
 type Attendee {

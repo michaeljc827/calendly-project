@@ -1,6 +1,6 @@
 const query = `
     type Query {
-        getMeetings: [Meeting!]!
+        getStaff: [Staff!]!
     }
 `
 export { query as query }

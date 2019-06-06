@@ -50,13 +50,22 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var _a = require('apollo-server'), ApolloServer = _a.ApolloServer, gql = _a.gql;
 var prisma = require('../prisma/generated/prisma-client').prisma;
 var query_1 = require("./schemas/query");
+var mutation_1 = require("./schemas/mutation");
+var staff_1 = require("./schemas/staff");
 var meeting_1 = require("./schemas/meeting");
+var attendee_1 = require("./schemas/attendee");
+var reservations_1 = require("./schemas/reservations");
+console.log(staff_1.staff);
 var Query = require('./resolvers/Query');
+var Mutation = require('./resolvers/Mutation');
+var Staff = require('./resolvers/Staff');
 var resolvers = {
-    Query: Query
+    Query: Query,
+    Mutation: Mutation,
+    Staff: Staff
 };
 var server = new ApolloServer({
-    typeDefs: [query_1.query, meeting_1.meeting],
+    typeDefs: [query_1.query, mutation_1.mutation, staff_1.staff, meeting_1.meeting, attendee_1.attendee, reservations_1.reservation],
     resolvers: resolvers,
     context: function (_a) {
         var req = _a.req;
